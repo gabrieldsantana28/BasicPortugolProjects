@@ -55,7 +55,7 @@ enquanto opc <> 3 faca
               limpatela
               escreval()
               para reg de 1 ate x faca
-                   escreval(reg, "° cálculo: ")
+                   escreval(reg, "° orçamento: ")
                    escreval("Volume: ", vol[reg])
                    escreval("Valor final: R$", vlr[reg])
                    escreval()
