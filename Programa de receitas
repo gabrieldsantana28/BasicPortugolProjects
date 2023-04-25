@@ -1,7 +1,7 @@
 # Programs-Portugol
 Var
 // Seção de Declarações das variáveis
-ing, qnt, rec : vetor[1..10] de caractere
+ing, qnt, rec : vetor[1..30] de caractere
 reg, opc, ent, x : inteiro
 
 Inicio
@@ -43,11 +43,10 @@ enquanto opc <> 4 faca
             para reg de 1 ate x faca
                  escreval("___________________________")
                  escreval("Insira seu ", reg, "° ingrediente:")
-                 leia(ing[reg])
+               leia(ing[reg])
                  escreval()
                  escreval("Insira a quantidade de seu ", reg, "° ingrediente: ")
                  leia(qnt[reg])
-
             fimpara
             escreval("Pressione enter para continuar")
             leia(ent)
@@ -72,6 +71,7 @@ enquanto opc <> 4 faca
 
 
          se opc = 3 entao
+            para reg de 1 ate x faca
             ing[1] <- " "
             qnt[1] <- " "
             ing[2] <- " "
@@ -92,6 +92,47 @@ enquanto opc <> 4 faca
             qnt[9] <- " "
             ing[10] <- " "
             qnt[10] <- " "
+            ing[11] <- " "
+            qnt[11] <- " "
+            ing[12] <- " "
+            qnt[12] <- " "
+            ing[13] <- " "
+            qnt[13] <- " "
+            ing[14] <- " "
+            qnt[14] <- " "
+            ing[15] <- " "
+            qnt[15] <- " "
+            ing[16] <- " "
+            qnt[16] <- " "
+            ing[17] <- " "
+            qnt[17] <- " "
+            ing[18] <- " "
+            qnt[18] <- " "
+            ing[19] <- " "
+            qnt[19] <- " "
+            ing[20] <- " "
+            qnt[20] <- " "
+            ing[21] <- " "
+            qnt[21] <- " "
+            ing[22] <- " "
+            qnt[22] <- " "
+            ing[23] <- " "
+            qnt[23] <- " "
+            ing[24] <- " "
+            qnt[24] <- " "
+            ing[25] <- " "
+            qnt[25] <- " "
+            ing[26] <- " "
+            qnt[26] <- " "
+            ing[27] <- " "
+            qnt[27] <- " "
+            ing[28] <- " "
+            qnt[28] <- " "
+            ing[29] <- " "
+            qnt[29] <- " "
+            ing[30] <- " "
+            qnt[30] <- " "
+            fimpara
          fimse
 
 
