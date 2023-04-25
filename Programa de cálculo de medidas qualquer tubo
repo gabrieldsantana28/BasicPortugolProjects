@@ -1,0 +1,71 @@
+# Programs-Portugol
+Var
+// Seção de Declarações das variáveis
+r, c, d : vetor[1..10] de real
+reg, ent, opc, x : inteiro
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+enquanto opc <> 3 faca
+   escreval("==============================")
+   escreval("    CÁLCULADORA DE MEDIDAS    ")
+   escreval("           DE TUBOS           ")
+   escreval("==============================")
+   escreval()
+   escreval("Opções:")
+   escreval("1- Calcular -> {Tubo}")
+   escreval("2- Visualizar últimos cálculos")
+   escreval("3- Sair")
+   escreva("-> ")
+   leia(opc)
+   escreval()
+
+             se opc = 1 entao
+              limpatela
+                reg <- reg + 1
+                x <- reg
+                escreval(reg, "° cálculo")
+                escreva("Insira o raio do tubo: ")
+                leia(r[reg])
+                escreval()
+                d[reg] <- r[reg]*2
+                c[reg] <- 2*pi*r[reg]
+                escreval("Raio: ", r[reg])
+                escreval("Diâmetro: ", d[reg])
+                escreval("Circunferência: ", c[reg]:2:2)
+                escreval()
+                escreval("Pressione enter para continuar")
+                leia(ent)
+                limpatela
+             fimse
+
+
+              se opc = 2 entao
+               limpatela
+                 escreval("=====================")
+                 escreval("      HISTÓRICO      ")
+                 escreval("     DE CÁLCULOS     ")
+                 escreval("=====================")
+                 para reg de 1 ate x faca
+                 escreval(reg, "° cálculo: ")
+                 escreval("Raio: ", r[reg])
+                 escreval("Diâmetro: ", d[reg])
+                 escreval("Circunferência: ", c[reg]:2:2)
+                 escreval()
+              fimpara
+                 escreval()
+                 escreval("Pressione enter para continuar")
+                 leia(ent)
+                 limpatela
+              fimse
+
+              se reg >= 10 entao
+                 reg <- reg - 1
+              fimse
+
+
+fimenquanto
+
+
+Fimalgoritmo
