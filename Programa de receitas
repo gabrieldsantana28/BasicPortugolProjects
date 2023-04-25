@@ -1,0 +1,101 @@
+# Programs-Portugol
+Var
+// Seção de Declarações das variáveis
+ing, qnt, rec : vetor[1..10] de caractere
+reg, opc, ent, x : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+enquanto opc <> 4 faca
+         escreval("=========================")
+         escreval("   SISTEMA DE RECEITAS   ")
+         escreval("         ONLINE          ")
+         escreval("=========================")
+         escreval()
+         escreval("Opções: ")
+         escreval("1- Criar receita")
+         escreval("2- Visualizar receita")
+         escreval("3- Apagar receita")
+         escreval("4- Sair")
+         escreva("-> ")
+         leia(opc)
+         escreval()
+         limpatela
+
+         se opc = 1 entao
+            escreval( "=================")
+            escreval("   CRIAR RECEITA  ")
+            escreval( "=================")
+            escreval()
+            x <- 31
+       enquanto x > 30 faca
+            escreval("Quantos ingredientes você deseja incluir em sua receita?")
+            leia(x)
+            escreval()
+         se x > 30 entao
+            escreval("Limite de ingredientes atingido!(Max: 30)")
+            escreval()
+            escreval("Pressione enter para voltar")
+            leia(ent)
+            limpatela
+         fimse
+       fimenquanto
+            para reg de 1 ate x faca
+                 escreval("___________________________")
+                 escreval("Insira seu ", reg, "° ingrediente:")
+                 leia(ing[reg])
+                 escreval()
+                 escreval("Insira a quantidade de seu ", reg, "° ingrediente: ")
+                 leia(qnt[reg])
+
+            fimpara
+            escreval("Pressione enter para continuar")
+            leia(ent)
+            limpatela
+         fimse
+
+
+         se opc = 2 entao
+            escreval("=============")
+            escreval("   RECEITA   ")
+            escreval("=============")
+            escreval()
+            para reg de 1 ate x faca
+                 escreval(reg, "° ingrediente: ", ing[reg])
+                 escreval("Quantidade: ", qnt[reg])
+                 escreval()
+            fimpara
+            escreval("Pressione enter para continuar")
+            leia(ent)
+            limpatela
+         fimse
+
+
+         se opc = 3 entao
+            ing[1] <- " "
+            qnt[1] <- " "
+            ing[2] <- " "
+            qnt[2] <- " "
+            ing[3] <- " "
+            qnt[3] <- " "
+            ing[4] <- " "
+            qnt[4] <- " "
+            ing[5] <- " "
+            qnt[5] <- " "
+            ing[6] <- " "
+            qnt[6] <- " "
+            ing[7] <- " "
+            qnt[7] <- " "
+            ing[8] <- " "
+            qnt[8] <- " "
+            ing[9] <- " "
+            qnt[9] <- " "
+            ing[10] <- " "
+            qnt[10] <- " "
+         fimse
+
+
+fimenquanto
+
+
+Fimalgoritmo
