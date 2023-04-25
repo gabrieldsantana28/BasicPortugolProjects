@@ -1,0 +1,71 @@
+# Programs-Portugol
+Var
+// Seção de Declarações das variáveis
+r, h, res : vetor[1..10] de real
+reg, opc, ent, x : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+enquanto opc <> 3 faca
+         escreval("=======================")
+         escreval("   CÁLCULO DE VOLUME   ")
+         escreval("      DE CILINDRO      ")
+         escreval("=======================")
+         escreval()
+         escreval("________")
+         escreval("Opções: ")
+         escreval("1- Calcular volume")
+         escreval("2- Visualizar últimos cálculos")
+         escreval("3- Sair")
+         escreva("-> ")
+         leia(opc)
+         escreval()
+         limpatela
+
+
+                   se opc = 1 entao
+                      reg <- reg + 1
+                      x <- reg
+                      escreval()
+                      escreval(reg, "° cálculo")
+                      escreva("Insira o raio de seu cilindro: ")
+                      leia(r[reg])
+                      escreva("Insira a altura de seu cilindro: ")
+                      leia(h[reg])
+                      escreval()
+                      res[reg] <- pi*r[reg]^2*h[reg]
+                      escreval("Resultado: ", res[reg]:2:2)
+                      escreval()
+                      escreval()
+                      escreval("Pressione enter para continuar")
+                      leia(ent)
+                      limpatela
+
+                   SENAO
+
+                   se opc = 2 entao
+                      escreval("=============================")
+                      escreval("    HISTÓRICO DE CÁLCULOS    ")
+                      escreval("=============================")
+                      escreval()
+                      para reg de 1 ate x faca
+                      escreval("Resultado ", reg, "° cálculo: ")
+                      escreval("Raio: ", r[reg], " | ", "Altura: ", h[reg])
+                      escreval("Resultado: ", res[reg]:2:2)
+                      escreval()
+                      fimpara
+                      escreval()
+                      escreval("Pressione enter para continuar")
+                      leia(ent)
+                      limpatela
+                   fimse
+                    fimse
+
+  se reg = 10 entao
+     reg <- reg - 1
+  fimse
+
+
+fimenquanto
+
+Fimalgoritmo
