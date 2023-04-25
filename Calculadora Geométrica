@@ -1,0 +1,173 @@
+var
+x : vetor[1..10] de real
+aq, pq, ac, pc, at, pt, l, ld, h, r, b : vetor[1..10] de real
+obj, ent, req, rec, ret, regc, regq, regt : inteiro
+
+
+inicio
+// Seção de Comandos
+enquanto obj <> 7 faca
+  escreval("===========================")
+  escreval("    SISTEMA DE CÁLCULOS    ")
+  escreval("   DE FORMAS GEOMÉTRICAS   ")
+  escreval("===========================")
+  escreval()
+  escreval("Opções: ")
+  escreval("1- Quadrado")
+  escreval("2- Círculo")
+  escreval("3- Triângulo")
+  escreval("4- Registro de medidas -> Quadrado")
+  escreval("5- Registro de medidas -> Círculo")
+  escreval("6- Registro de medidas -> Triângulo")
+  escreval("7- Sair")
+  escreval()
+  escreval("Insira a opção que você deseja: ")
+  escreva("-> ")
+  leia(obj)
+  escreval()
+  limpatela
+
+                                   se obj = 1 entao
+                                       escreval("__________________________________")
+                                       escreval("      CALCULADORA GEOMÉTRICA      ")
+                                       escreval()
+                                       req <- req + 1
+                                       regq <- regq +1
+                                       escreval(req, "° medida")
+                                       escreva("Insira o valor da base do quadrado: ")
+                                       leia(b[req])
+                                       escreva("Insira o valor da altura do quadrado: ")
+                                       leia(h[req])
+                                       escreval()
+                                       aq[req] <- b[req]*h[req]
+                                       pq[req] <- b[req]*4
+                                       escreval("Área: ", aq[req])
+                                       escreval("Perímetro: ", pq[req])
+                                       escreval()
+                                       escreval("Pressione enter para continuar")
+                                       leia(ent)
+                                       limpatela
+
+                                   SENAO
+
+                                   se obj = 2 entao
+                                       escreval("__________________________________")
+                                       escreval("      CALCULADORA GEOMÉTRICA      ")
+                                       escreval()
+                                       rec <- rec + 1
+                                       regc <- regc +1
+                                       escreval(rec, "° medida")
+                                       escreva("Insira o valor do raio do círculo: ")
+                                       leia(r[rec])
+                                       ac[rec] <- pi*r[rec]^2
+                                       pc[rec] <- 2*pi*r[rec]
+                                       escreval()
+                                       escreval("Área: ", ac[rec]:2:2)
+                                       escreval("Perímetro: ", pc[rec]:2:2)
+                                       escreval()
+                                       escreval("Pressione enter para continuar")
+                                       leia(ent)
+                                       limpatela
+
+                                   SENAO
+
+                                   se obj = 3 entao
+                                       escreval("__________________________________")
+                                       escreval("      CALCULADORA GEOMÉTRICA      ")
+                                       escreval()
+                                       ret <- ret + 1
+                                       regt <- regt +1
+                                       escreval(ret, "° medida")
+                                       escreva("Insira o valor da base do triângulo: ")
+                                       leia(b[ret])
+                                       escreva("Insira o valor da altura do triângulo: ")
+                                       leia(h[ret])
+                                       at[ret] <- (b[ret]*h[ret])/2
+                                       pt[ret] <- b[ret]*3
+                                       escreval()
+                                       escreval("Área: ", at[ret])
+                                       escreval("Perímetro: ", pt[ret])
+                                       escreval()
+                                       escreval("Pressione enter para continuar")
+                                       leia(ent)
+                                       limpatela
+
+
+                                 FIMSE
+                                  FIMSE
+                                   FIMSE
+      se obj = 4 entao
+           escreval()
+           escreval("==========================")
+           escreval("        HISTÓRICO         ")
+           escreval("    DE MEDIDAS QUADRADO   ")
+           escreval("==========================")
+           escreval()
+           para req de 1 ate regq faca
+                escreval(req, "° medida: ")
+                escreval("Área: " ,aq[regq])
+                escreval("Perímetro: ", pq[regq])
+                escreval()
+           fimpara
+
+           escreval("Pressione enter para continuar")
+           leia(ent)
+           limpatela
+       fimse
+
+       se obj = 5 entao
+           escreval()
+           escreval("==========================")
+           escreval("        HISTÓRICO         ")
+           escreval("    DE MEDIDAS CÍRCULO    ")
+           escreval("==========================")
+           escreval()
+           para rec de 1 ate regc faca
+                escreval(rec, "° medida: ")
+                escreval("Área: " ,ac[regc]:2:2)
+                escreval("Perímetro: ", pc[regc]:2:2)
+                escreval()
+           fimpara
+
+           escreval("Pressione enter para continuar")
+           leia(ent)
+           limpatela
+       fimse
+
+       se obj = 6 entao
+           escreval()
+           escreval("===========================")
+           escreval("        HISTÓRICO          ")
+           escreval("   DE MEDIDAS TRI NGULO    ")
+           escreval("===========================")
+           escreval()
+           para ret de 1 ate regt faca
+                escreval(ret, "° medida: ")
+                escreval("Área: " ,at[regt])
+                escreval("Perímetro: ", pt[regt])
+                escreval()
+           fimpara
+
+           escreval("Pressione enter para continuar")
+           leia(ent)
+           limpatela
+       fimse
+
+      se req = 5 entao
+         req <- req - 5
+      fimse
+
+      se rec = 5 entao
+         rec <- rec - 5
+      fimse
+
+      se ret = 5 entao
+         ret <- ret - 5
+      fimse
+
+fimenquanto
+
+
+
+fimalgoritmo
+
