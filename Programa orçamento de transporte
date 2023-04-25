@@ -1,0 +1,76 @@
+# Programs-Portugol
+var
+vol, vlr, b, l, h : vetor[1..5] de real
+obj : caractere
+opc, reg, ent, x : inteiro
+taxa: real
+
+
+inicio
+// Seção de Comandos
+enquanto opc <> 3 faca
+   taxa <- 250/100
+   escreval("==================================")
+   escreval("   SISTEMA DE ORÇAMENTO ON-LINE   ")
+   escreval("        TRANSPORTE DE PRODUTOS    ")
+   escreval("==================================")
+   escreval()
+   escreval("Opções")
+   escreval("1- Calcular valor do transporte")
+   escreval("2- Visualizar últimos valores calculados")
+   escreval("3- Sair")
+   escreva("-> ")
+   leia(opc)
+
+           se opc = 1 entao
+              limpatela
+              escreval()
+              reg <- reg + 1
+              x <- x + 1
+              escreval("=================")
+              escreval("   CALCULADORA   ")
+              escreval("=================")
+              escreval()
+              escreval(reg, "° cálculo")
+              escreva("Insira a base de seu produto: ")
+              leia(b[reg])
+              escreva("Insira a largura de seu produto: ")
+              leia(l[reg])
+              escreva("Insira a altura de seu produto: ")
+              leia(h[reg])
+              escreval()
+              vol[reg] <- b[reg]*l[reg]*h[reg]
+              vlr[reg] <- vol[reg]*taxa
+              escreval("______________________")
+              escreval("Volume do produto: ", vol[reg])
+              escreval("Valor final: R$", vlr[reg])
+              escreval()
+              escreval("Pressione enter para continuar")
+              leia(ent)
+              limpatela
+           fimse
+
+
+           se opc = 2 entao
+              limpatela
+              escreval()
+              para reg de 1 ate x faca
+                   escreval(reg, "° cálculo: ")
+                   escreval("Volume: ", vol[reg])
+                   escreval("Valor final: R$", vlr[reg])
+                   escreval()
+              fimpara
+              escreval("Pressione enter para continuar")
+              leia(ent)
+              limpatela
+           fimse
+
+          se reg >= 5 entao
+             reg <- reg - 5
+          fimse
+
+
+
+fimenquanto
+
+fimalgoritmo
