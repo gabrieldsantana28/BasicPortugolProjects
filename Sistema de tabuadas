@@ -1,0 +1,107 @@
+# Programs-Portugol
+Var
+// Seção de Declarações das variáveis
+ent, x, contagem, menu : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+enquanto menu <> 3 faca
+   escreval("================================================")
+   escreval("             SISTEMA DE TABUADAS")
+   escreval("================================================")
+   escreval()
+   escreval()
+   escreval("---MENU---  ")
+   escreval("1- Visualizar qualquer tabuada")
+   escreval("2- Visualizar todas tabuadas(1-10)")
+   escreval("3- Sair")
+   leia(menu)
+
+   se menu = 1 entao
+      escreva("Digite o número da tabuada que você deseja ver: ")
+      leia(x)
+      escreval()
+      escreval("________________")
+     para contagem de 1 ate 10 faca
+          escreval(x, " x ", contagem, " = ", x*contagem)
+     fimpara
+   fimse
+     
+   se menu = 2 entao
+      x <- 1
+      escreval("___________")
+      para contagem de 1 ate 10 faca
+           escreval("1 X ", contagem, " = ", x*contagem)
+      fimpara
+      escreval()
+      escreval("___________")
+      x <- 2
+      para contagem de 1 ate 10 faca
+           escreval("2 X ", contagem, " = ", x*contagem)
+      fimpara
+      escreval()
+      escreval("___________")
+      x <- 3
+      para contagem de 1 ate 10 faca
+           escreval("3 X ", contagem, " = ", x*contagem)
+      fimpara
+      escreval()
+      escreval("___________")
+      x <- 4
+      para contagem de 1 ate 10 faca
+           escreval("4 X ", contagem, " = ", x*contagem)
+      fimpara
+      escreval()
+      escreval("___________")
+      x <- 5
+      para contagem de 1 ate 10 faca
+           escreval("5 X ", contagem, " = ", x*contagem)
+      fimpara
+      escreval()
+      escreval("___________")
+      x <- 6
+      para contagem de 1 ate 10 faca
+           escreval("6 X ", contagem, " = ", x*contagem)
+      fimpara
+      escreval()
+      escreval("___________")
+      x <- 7
+      para contagem de 1 ate 10 faca
+           escreval("7 X ", contagem, " = ", x*contagem)
+      fimpara
+      escreval()
+      escreval("___________")
+      x <- 8
+      para contagem de 1 ate 10 faca
+           escreval("8 X ", contagem, " = ", x*contagem)
+      fimpara
+      escreval()
+      escreval("___________")
+      x <- 9
+      para contagem de 1 ate 10 faca
+           escreval("9 X ", contagem, " = ", x*contagem)
+      fimpara
+      escreval()
+      escreval("_____________")
+      x <- 10
+      para contagem de 1 ate 10 faca
+           escreval("10 X ", contagem, " = ", x*contagem)
+      fimpara
+      
+   fimse
+   
+   se menu = 3 entao
+      fimalgoritmo
+   fimse
+
+escreval("Pressione enter para continuar")
+leia(ent)
+limpatela
+
+
+fimenquanto
+ fimenquanto
+
+ fimalgoritmo
+
+
