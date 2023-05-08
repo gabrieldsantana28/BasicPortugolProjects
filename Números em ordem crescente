@@ -1,4 +1,10 @@
 # Programs-Portugol
+Algoritmo "Ordem Crescente"
+// Disciplina   : Lógica de Programação
+// Professor   : Lincoln Fernando Raitz Martins
+// Descrição   : Organiza os números inseridos em ordem crescente
+// Autor(a)    : Gabriel Luis de Santana
+// Data atual  : 08/05/2023
 Var
 numero : vetor[1..20] de inteiro
 i, i2, t : inteiro
@@ -15,10 +21,10 @@ Inicio
    // ordenando números
    para i de 1 ate 20 faca
       para i2 de i ate 20 faca
-         se numero[i] > numero[i2] entao
-            t <- numero[i]
-            numero[i] <- numero[i2]
-            numero[i2] <- t
+         se numero[i] > numero[i2] entao // comparando se numero[i] > numero[i2]
+            t <- numero[i] // fazendo a troca de numero[i] para t
+            numero[i] <- numero[i2] // fazendo a troca de numero[i2] para numero[i]
+            numero[i2] <- t // fazendo a troca de numero[i2] para t
          fimse
       fimpara
    fimpara
@@ -31,6 +37,9 @@ Inicio
       escreva(numero[i], ", ")
    fimpara
       escreva(numero[20], ". ")
+
+   
+fimalgoritmo
 
    
 fimalgoritmo
