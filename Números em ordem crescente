@@ -1,0 +1,36 @@
+# Programs-Portugol
+Var
+numero : vetor[1..20] de inteiro
+i, i2, t : inteiro
+   
+Inicio
+   // inserir números
+   para i de 1 ate 20 faca
+      escreva("Digite um número para a ", i, "° posição: ")
+      leia(numero[i])
+   fimpara
+   
+   escreval ()
+
+   // ordenando números
+   para i de 1 ate 20 faca
+      para i2 de i ate 20 faca
+         se numero[i] > numero[i2] entao
+            t <- numero[i]
+            numero[i] <- numero[i2]
+            numero[i2] <- t
+         fimse
+      fimpara
+   fimpara
+   
+   escreval()
+   escreval(" ---> ORDEM CRESCENTE <--- ")
+
+   // exibindo ordem crescente dos números inseridos
+   para i de 1 ate 19 faca
+      escreva(numero[i], ", ")
+   fimpara
+      escreva(numero[20], ". ")
+
+   
+fimalgoritmo
