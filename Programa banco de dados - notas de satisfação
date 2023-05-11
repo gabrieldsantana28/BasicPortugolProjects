@@ -1,0 +1,250 @@
+# Programs-Portugol
+Var
+// Seção de Declarações das variáveis
+   indf1, indf2, indf3 : vetor [1..10] de real
+   reg1 : inteiro
+   f1, f2, f3 : inteiro
+   menu, menu2, x, y, reg, ent : inteiro
+   notas : vetor[1..100] de real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+ enquanto reg1 <> 100 faca
+  enquanto menu <> 3 faca
+   escreval("=========================")
+   escreval("     BANCO DE DADOS      ")
+   escreval("   NOTAS DE SATISFAÇÃO   ")
+   escreval("=========================")
+   escreval()
+   escreval("1- Cadastrar notas")
+   escreval("2- Visualizar indicador de desempenho")
+   escreval("3- Sair")
+   escreva("-> ")
+   leia(menu)
+
+   se menu = 1 entao
+    x <- x + 10
+    y <- y + 1
+    se y >= 2 entao
+     y <- y + 9
+    fimse
+    para reg de y ate x faca
+     escreva("Cadastre a ", reg, "° nota: ")
+     leia(notas[reg])
+
+     reg1 <- reg1 + 1
+     se (notas[reg] >= 0) e (notas[reg] <= 5) entao
+      f1 <- f1 + 1
+     senao
+      se (notas[reg] >= 6) e (notas[reg] <= 8) entao
+       f2 <- f2 + 1
+      senao
+       se (notas[reg] = 9) ou (notas[reg] = 10) entao
+        f3 <- f3 + 1
+       fimse
+      fimse
+     fimse
+     enquanto (notas[reg] < 0) ou (notas[reg] > 10) faca
+      escreval("NOTA INVÁLIDA!")
+      escreva("Cadastre a ", reg, "° notas: ")
+      leia(notas[reg])
+     fimenquanto
+    fimpara
+
+   se reg1 = 10 entao
+    indf1[1] <- f1/10
+    indf2[1] <- f2/10
+    indf3[1] <- f3/10
+   senao
+    se reg1 = 20 entao
+     indf1[2] <- f1/20
+     indf2[2] <- f2/20
+     indf3[2] <- f3/20
+    senao
+     se reg1 = 30 entao
+      indf1[3] <- f1/30
+      indf2[3] <- f2/30
+      indf3[3] <- f3/30
+     senao
+      se reg1 = 40 entao
+       indf1[4] <- f1/40
+       indf2[4] <- f2/40
+       indf3[4] <- f3/40
+      senao
+       se reg1 = 50 entao
+        indf1[5] <- f1/50
+        indf2[5] <- f2/50
+        indf3[5] <- f3/50
+       senao
+        se reg1 = 60 entao
+         indf1[6] <- f1/60
+         indf2[6] <- f2/60
+         indf3[6] <- f3/60
+        senao
+         se reg1 = 70 entao
+          indf1[7] <- f1/70
+          indf2[7] <- f2/70
+          indf3[7] <- f3/70
+         senao
+          se reg1 = 80 entao
+           indf1[8] <- f1/80
+           indf2[8] <- f2/80
+           indf3[8] <- f3/80
+          senao
+           se reg1 = 90 entao
+            indf1[9] <- f1/90
+            indf2[9] <- f2/90
+            indf3[9] <- f3/90
+           senao
+            se reg1 = 100 entao
+             indf1[10] <- f1/100
+             indf2[10] <- f2/100
+             indf3[10] <- f3/100
+            fimse
+           fimse
+          fimse
+         fimse
+        fimse
+       fimse
+      fimse
+     fimse
+    fimse
+   fimse
+  senao
+
+   se menu = 2 entao
+    escreval("VISUALIZAR INDICADORES")
+    escreval()
+    se reg1 = 10 entao
+     escreval("INDICADOR 10 REGISTROS")
+     escreva()
+     escreval("Faixa 1(Ruim ou médio): ", (indf1[1]*100),"%")
+     escreval("Faixa 2(Médio ou bom): ", (indf2[1]*100),"%")
+     escreval("Faixa 3(Ótimo): ", (indf3[1]*100),"%")
+    senao
+     se reg1 = 20 entao
+      escreval("INDICADOR 20 REGISTROS")
+      escreva()
+      escreval("Faixa 1(Ruim ou médio): ", (indf1[2]*100),"%")
+      escreval("Faixa 2(Médio ou bom): ", (indf2[2]*100),"%")
+      escreval("Faixa 3(Ótimo): ", (indf3[2]*100),"%")
+     senao
+      se reg1 = 30 entao
+       escreval("INDICADOR 30 REGISTROS")
+       escreva()
+       escreval("Faixa 1(Ruim ou médio): ", (indf1[3]*100),"%")
+       escreval("Faixa 2(Médio ou bom): ", (indf2[3]*100),"%")
+       escreval("Faixa 3(Ótimo): ", (indf3[3]*100),"%")
+      senao
+       se reg1 = 40 entao
+        escreval("INDICADOR 40 REGISTROS")
+        escreva()
+        escreval("Faixa 1(Ruim ou médio): ", (indf1[4]*100),"%")
+        escreval("Faixa 2(Médio ou bom): ", (indf2[4]*100),"%")
+        escreval("Faixa 3(Ótimo): ", (indf3[4]*100),"%")
+       senao
+        se reg1 = 50 entao
+         escreval("INDICADOR 50 REGISTROS")
+         escreva()
+         escreval("Faixa 1(Ruim ou médio): ", (indf1[5]*100),"%")
+         escreval("Faixa 2(Médio ou bom): ", (indf2[5]*100),"%")
+         escreval("Faixa 3(Ótimo): ", (indf3[5]*100),"%")
+        senao
+         se reg1 = 60 entao
+          escreval("INDICADOR 60 REGISTROS")
+          escreva()
+          escreval("Faixa 1(Ruim ou médio): ", (indf1[6]*100),"%")
+          escreval("Faixa 2(Médio ou bom): ", (indf2[6]*100),"%")
+          escreval("Faixa 3(Ótimo): ", (indf3[6]*100),"%")
+         senao
+          se reg1 = 70 entao
+           escreval("INDICADOR 70 REGISTROS")
+           escreva()
+           escreval("Faixa 1(Ruim ou médio): ", (indf1[7]*100),"%")
+           escreval("Faixa 2(Médio ou bom): ", (indf2[7]*100),"%")
+           escreval("Faixa 3(Ótimo): ", (indf3[7]*100),"%")
+          senao
+           se reg1 = 80 entao
+            escreval("INDICADOR 80 REGISTROS")
+            escreva()
+            escreval("Faixa 1(Ruim ou médio): ", (indf1[8]*100),"%")
+            escreval("Faixa 2(Médio ou bom): ", (indf2[8]*100),"%")
+            escreval("Faixa 3(Ótimo): ", (indf3[8]*100),"%")
+           senao
+            se reg1 = 90 entao
+             escreval("INDICADOR 90 REGISTROS")
+             escreva()
+             escreval("Faixa 1(Ruim ou médio): ", (indf1[9]*100),"%")
+             escreval("Faixa 2(Médio ou bom): ", (indf2[9]*100),"%")
+             escreval("Faixa 3(Ótimo): ", (indf3[9]*100),"%")
+            senao
+             se reg1 = 100 entao
+              escreval("INDICADOR 100 REGISTROS")
+              escreva()
+              escreval("Faixa 1(Ruim ou médio): ", (indf1[10]*100),"%")
+              escreval("Faixa 2(Médio ou bom): ", (indf2[10]*100),"%")
+              escreval("Faixa 3(Ótimo): ", (indf3[10]*100),"%")
+
+             fimse
+            fimse
+           fimse
+          fimse
+         fimse
+        fimse
+       fimse
+      fimse
+     fimse
+    fimse
+   fimse
+  fimse
+
+     se menu = 3 entao
+      fimalgoritmo
+     fimse
+     
+    se reg1 = 100 entao
+     enquanto menu2 <> 2 faca
+      limpatela
+      escreval("=========================")
+      escreval("     BANCO DE DADOS      ")
+      escreval("   NOTAS DE SATISFAÇÃO   ")
+      escreval("=========================")
+      escreval()
+      escreval("1- Visualizar indicador de desempenho")
+      escreval("2- Sair")
+      escreva("-> ")
+      leia(menu2)
+      limpatela
+      
+      se menu2 = 1 entao
+       escreval("_______________________")
+       escreval("INDICADOR 100 REGISTROS")
+       escreva()
+       escreval("Faixa 1: ", (indf1[10]*100),"%")
+       escreval("Faixa 2: ", (indf2[10]*100),"%")
+       escreval("Faixa 3: ", (indf3[10]*100),"%")
+       escreval()
+       escreval("Pressione enter para voltar ao menu")
+       leia(ent)
+       limpatela
+      fimse
+
+       se menu2 = 2 entao
+        fimalgoritmo
+       fimse
+
+
+     fimenquanto
+    fimse
+    
+  escreval()
+  escreval("Pressione enter para voltar ao menu")
+  leia(ent)
+  limpatela
+
+ fimenquanto
+fimenquanto
+
+
+Fimalgoritmo
+
