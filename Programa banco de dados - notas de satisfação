@@ -1,4 +1,9 @@
 # Programs-Portugol
+Algoritmo "semnome"
+// Disciplina   : Lógica da Programação
+// Professor   : Lincoln Fernando Raitz Martins
+// Descrição   : Cadastra notas de satisfação em um banco de dados e gera um indicador de desempenho
+// Autor(a)    : Gabriel Vinicius da Cruz, Gabriel Luis de Santana, João Victor
 Var
 // Seção de Declarações das variáveis
    indf1, indf2, indf3 : vetor [1..10] de real
@@ -22,7 +27,9 @@ Inicio
    escreva("-> ")
    leia(menu)
 
-   se menu = 1 entao
+   escolha menu
+
+    caso 1
     x <- x + 10
     y <- y + 1
     se y >= 2 entao
@@ -110,9 +117,9 @@ Inicio
      fimse
     fimse
    fimse
-  senao
+  
 
-   se menu = 2 entao
+   caso 2
     escreval("VISUALIZAR INDICADORES")
     escreval()
     se reg1 = 10 entao
@@ -195,12 +202,18 @@ Inicio
       fimse
      fimse
     fimse
-   fimse
-  fimse
+   
 
-     se menu = 3 entao
+
+     caso 3
       fimalgoritmo
-     fimse
+
+
+     outrocaso
+      escreval("Opção inválida!")
+     fimescolha
+     
+     
      
     se reg1 = 100 entao
      enquanto menu2 <> 2 faca
@@ -216,7 +229,9 @@ Inicio
       leia(menu2)
       limpatela
       
-      se menu2 = 1 entao
+      escolha menu2
+      
+      caso 1
        escreval("_______________________")
        escreval("INDICADOR 100 REGISTROS")
        escreva()
@@ -227,13 +242,14 @@ Inicio
        escreval("Pressione enter para voltar ao menu")
        leia(ent)
        limpatela
-      fimse
 
-       se menu2 = 2 entao
+       caso 2
         fimalgoritmo
-       fimse
 
+       outrocaso
+        escreval("Opção inválida!")
 
+       fimescolha
      fimenquanto
     fimse
     
