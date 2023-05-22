@@ -1,0 +1,83 @@
+# Programs-Portugol
+Algoritmo "Impar ou par"
+// Disciplina   : Lógica da Programação
+// Professor   : Lincoln Fernando Raitz Martins
+// Descrição   : Caso os 2 números inseridos forem par irá tornar o segundo número potencia do primeiro, caso os 2 sejam ímpar irá somar o fatorial dos dois números, caso 1 seja impar e o outro par, irá dividir a fatorial do primeiro pela raiz quadrada do segundo
+// Autor(a)    : Gabriel Luis de Santana
+// Data atual  : 18/05/2023
+Var
+ n1, n2 : inteiro
+ menu, fat1, fat2, x, y, ent : inteiro
+
+Inicio
+enquanto menu <> 2 faca
+   escreval("----------------------------------")
+   escreval("|             MENU               |")
+   escreval("----------------------------------")
+   escreval("|     1- Inserir números         |")
+   escreval("|     2- Sair do programa        |")
+   escreval("----------------------------------")
+   escreval("Insira o número da opção desejada:")
+   escreva("-> ")
+   leia(menu)
+
+   escolha menu
+   
+   caso 1
+      limpatela
+      escreval("--------------------------")
+      escreval("|  OPÇÃO 1 SELECIONADA:  |")
+      escreval("|    INSERIR NÚMEROS     |")
+      escreval("--------------------------")
+      escreval()
+      escreva("Insira o primeiro número:  ")
+      leia(n1)
+      escreval()
+      escreva("Insira o segundo número: ")
+      leia(n2)
+
+    se (n1 mod 2 = 0) e (n2 mod 2 = 0) entao
+       escreval(n1, "^",n2, " = ", n1^n2)
+    senao
+      se (n1 mod 2 = 1) e (n2 mod 2 = 1) entao
+         fat1 <- 1
+         fat2 <- 1
+       para x de n1 ate 1 passo -1 faca
+          fat1 <- fat1*x
+       fimpara
+        para y de n2 ate 1 passo -1 faca
+           fat2 <- fat2*y
+        fimpara
+         escreval()
+         escreval("Fatorial do 1° número: ", fat1)
+         escreval("Fatorial do 2° número: ", fat2)
+         escreval("Soma: ", fat1, " + ", fat2, " = ", fat1+fat2)
+       senao
+        se (n1 mod 2 = 1) e (n2 mod 2 = 0) ou (n1 mod 2 = 0) e (n2 mod 2 = 1) entao
+           fat1 <- 1
+         para x de n1 ate 1 passo -1 faca
+            fat1 <- fat1*x
+         fimpara
+          escreval()
+          escreval("Fatorial do 1° número: ", fat1)
+          escreval("Raiz quadrado do 2° número: ", raizq(n2):2:1)
+          escreval( fat1, " / ", raizq(n2):2:1, " = ", fat1/raizq(n2):2:1)
+        fimse
+      fimse
+    fimse
+    escreval()
+    escreval("Pressione enter para continuar")
+    leia(ent)
+    limpatela
+
+   caso 2
+      mudacor("vermelho","frente")
+      escreval()
+      escreval("------> PROGRAMA ENCERRADO <------")
+
+   fimescolha
+
+fimenquanto
+
+Fimalgoritmo
+
