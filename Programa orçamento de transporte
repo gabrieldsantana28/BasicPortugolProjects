@@ -1,4 +1,9 @@
 # Programs-Portugol
+Algoritmo "OrçamentoDeTransporteDeProdutos"
+// Disciplina   : Lógica da Programação
+// Professor   : Lincoln Fernando Raitz Martins
+// Autor(a)    : Gabriel Luis de Santana
+
 var
 vol, vlr, b, l, h : vetor[1..5] de real
 obj : caractere
