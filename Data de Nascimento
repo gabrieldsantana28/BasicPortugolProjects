@@ -1,0 +1,208 @@
+# Programs-Portugol
+Algoritmo "DataDeNascimento"
+// Disciplina   : Lógica da Programação
+// Professor   : Lincoln Fernando Raitz Martins
+// Descrição   : Calcula a data de nascimento do usuário baseado na data de hoje e a idade do mesmo
+// Autor(a)    : Gabriel Luis de Santana
+Var
+// Seção de Declarações das variáveis
+ nd, nm, na, dia, mes, ano, ndia, nmes, nano, meses : vetor[1..5] de inteiro
+ menu, menu2, reg, ent, x : inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+enquanto menu <> 3 faca
+   escreval("==============================")
+   escreval("|     SISTEMA DE CÁLCULO     |")
+   escreval("|  -> DATA DE NASCIMENTO <-  |")
+   escreval("==============================")
+   escreval()
+   escreval(" -----MENU----- ")
+   escreval("1- Calcular data de nascimento")
+   escreval("2- Histórico de cálculos")
+   escreval("3- Sair")
+   escreva("-> ")
+   leia(menu)
+
+   escolha menu
+
+   caso 1
+      limpatela
+      reg <- reg + 1
+      escreval("=======================")
+      escreval("|   CÁLCULO DE DATA   |")
+      escreval("|    DE NASCIMENTO    |")
+      escreval("=======================")
+      escreval()
+      escreval("Insira a data de hoje:")
+      escreva("Dia: ")
+      leia(dia[reg])
+    se (dia[reg] < 1) ou (dia[reg] > 31) entao
+     enquanto (dia[reg] < 1) ou (dia[reg] > 31) faca
+        limpatela
+        escreval("Dia inválido!")
+        escreval()
+        escreval("Insira a data de hoje:")
+        escreva("Dia: ")
+        leia(dia[reg])
+     fimenquanto
+    fimse
+      escreva("Mês: ")
+      leia(mes[reg])
+    se (mes[reg] < 1) ou (mes[reg] > 12) entao
+     enquanto (mes[reg] < 1) ou (mes[reg] > 12) faca
+        limpatela
+        escreval("Mês inválido!")
+        escreval()
+        escreval("Insira a data de hoje:")
+        escreval("Dia: ", dia[reg])
+        escreva("Mês: ")
+        leia(mes[reg])
+     fimenquanto
+    fimse
+      escreva("Ano: ")
+      leia(ano[reg])
+      escreval()
+      escreval(dia[reg] , "/", mes[reg], "/", ano[reg])
+
+      escreval("Insira sua idade em anos, meses e dias:")
+      escreva("Anos: ")
+      leia(nano[reg])
+      escreva("Meses: ")
+      leia(nmes[reg])
+    se (nmes[reg] < 1) ou (nmes[reg] > 12) entao
+     enquanto (nmes[reg] < 0) ou (nmes[reg] > 12) faca
+        limpatela
+        escreval("Mês inválido!")
+        escreval()
+        escreval("Insira sua idade em anos, meses e dias:")
+        escreval("Anos: ", nano[reg])
+        escreval()
+        escreva("Meses: ")
+        leia(nmes[reg])
+     fimenquanto
+    fimse
+      escreva("Dias: ")
+      leia(ndia[reg])
+    se (ndia[reg] < 0) ou (ndia[reg] > 30) entao
+     enquanto (ndia[reg] < 0) ou (ndia[reg] > 30) faca
+        limpatela
+        escreval("Dia inválido!")
+        escreval()
+        escreval("Insira sua idade em anos, meses e dias:")
+        escreval("Anos: ", nano[reg])
+        escreval("Meses: ", nmes[reg])
+        escreva("Dias: ")
+        leia(ndia[reg])
+     fimenquanto
+    fimse
+      escreval()
+      nd[reg] <- dia[reg] - ndia[reg]
+      nm[reg] <- mes[reg] - nmes[reg]
+      na[reg] <- ano[reg] - nano[reg]
+    se nm[reg] <= 0 entao
+       nm[reg] <- 12 + nm[reg]
+       na[reg] <- na[reg] - 1
+    fimse
+    se nd[reg] <= 0 entao
+       nd[reg] <- 31 + nd[reg]
+       nm[reg] <- nm[reg] - 1
+    fimse
+
+      escreval()
+      escreval("------------------------------------")
+      escrevaL("| Data de nascimento: ", nd[reg], "/", nm[reg], "/", na[reg], " |")
+      escreval("------------------------------------")
+      escreval()
+      escreval()
+      escreval("Pressione enter para continuar")
+      leia(ent)
+      limpatela
+
+  caso 2
+     limpatela
+     escreval("===================")
+     escreval("|    HISTÓRICO    |")
+     escreval("|   DE CÁLCULOS   |")
+     escreval("===================")
+     escreval()
+     para x de 1 ate reg faca
+        escreval("________________________________________")
+        escreval("Data: ", dia[x] , "/", mes[x], "/", ano[x])
+        escreval("Idade: ", nano[x], " anos, ", nmes[x], " mês/meses e ", ndia[x], " dias")
+        escreval("Data de nascimento: ", nd[x], "/", nm[x], "/", na[x])
+     fimpara
+     escreval()
+     escreval("Pressione enter para continuar")
+     leia(ent)
+     limpatela
+
+  caso 3
+     mudacor("Vermelho","Frente")
+     escreval()
+     escreval("      PROGRAMA ENCERRADO!!!     ")
+     fimalgoritmo
+
+  outrocaso
+     escreval()
+     escreval("OPÇÃO INVÁLIDA!")
+     escreval()
+     escreval("Pressione enter para continuar")
+     leia(ent)
+     limpatela
+
+  fimescolha
+
+  se reg >= 5 entao
+     escreval(" LIMÍTE DE CÁLCULOS ATINGIDO!")
+     escreval()
+     escreval("==============================")
+     escreval("|     SISTEMA DE CÁLCULO     |")
+     escreval("|  -> DATA DE NASCIMENTO <-  |")
+     escreval("==============================")
+     escreval()
+     escreval(" -----MENU----- ")
+     escreval("1- Calcular data de nascimento")
+     escreval("2- Histórico de cálculos")
+     escreval("3- Sair")
+     escreva("-> ")
+     leia(menu2)
+
+     escolha menu2
+
+     caso 1
+        escreval()
+        escreval("   O limíte de cálculos foi atingido(5)!    ")
+        escreval("Para conseguir fazer mais cálculos você deve")
+        escreval("   apagar algum dos cálculos anteriores!    ")
+
+     caso 2
+        limpatela
+     escreval("===================")
+     escreval("|    HISTÓRICO    |")
+     escreval("|   DE CÁLCULOS   |")
+     escreval("===================")
+     escreval()
+     para x de 1 ate reg faca
+        escreval("________________________________________")
+        escreval("Data: ", dia[x] , "/", mes[x], "/", ano[x])
+        escreval("Idade: ", nano[x], " anos, ", nmes[x], " mês/meses e ", ndia[x], " dias")
+        escreval("Data de nascimento: ", nd[x], "/", nm[x], "/", na[x])
+     fimpara
+     escreval()
+     escreval("Pressione enter para continuar")
+     leia(ent)
+     limpatela
+
+     caso 3
+        mudacor("Vermelho","Frente")
+        escreval()
+        escreval("      PROGRAMA ENCERRADO!!!     ")
+        fimalgoritmo
+
+    fimescolha
+   fimse
+
+fimenquanto
+
+Fimalgoritmo
