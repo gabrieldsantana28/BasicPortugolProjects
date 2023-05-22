@@ -1,9 +1,9 @@
 # Programs-Portugol
-Algoritmo "semnome"
+Algoritmo "BancoDeDados&NotasDeSatisfação"
 // Disciplina   : Lógica da Programação
 // Professor   : Lincoln Fernando Raitz Martins
-// Descrição   : Cadastra notas de satisfação em um banco de dados e gera um indicador de desempenho
-// Autor(a)    : Gabriel Vinicius da Cruz, Gabriel Luis de Santana, João Victor
+// Autor(a)    : Gabriel Luis de Santana
+
 Var
 // Seção de Declarações das variáveis
    indf1, indf2, indf3 : vetor [1..10] de real
