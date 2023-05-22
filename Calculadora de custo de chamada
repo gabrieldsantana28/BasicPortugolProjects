@@ -1,4 +1,10 @@
 # Programs-Portugol
+Algoritmo "CalculadoraCustoDeChamada"
+// Disciplina   : Lógica da Programação
+// Professor   : Lincoln Fernando Raitz Martins
+// Autor(a)    : Gabriel Luis de Santana
+// Data atual  : 02/05/2023
+
 Var
 // Seção de Declarações das variáveis
 cdc : vetor[1..3,1..3] de real
