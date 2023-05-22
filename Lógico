@@ -1,0 +1,75 @@
+# Programs-Portugol
+Algoritmo "semnome"
+// Disciplina   : Lógica da Programação
+// Professor   : Lincoln Fernando Raitz Martins
+// Autor(a)    : Gabriel Luis de Santana
+// Data atual  : 22/05/2023
+Var
+v1, v2, res, res1 : inteiro
+sn, ent, reg : inteiro
+
+
+Inicio
+ // Função Soma
+ funcao soma (m, n : inteiro) : inteiro
+    var
+    rsom : inteiro
+    inicio
+    rsom <- m+n
+    retorne m+n
+ fimfuncao
+ // Função Subtração
+ funcao subtracao (m, n : inteiro) : inteiro
+    var
+    rsub : inteiro
+    inicio
+    rsub <- m-n
+    retorne m-n
+ fimfuncao
+ // Função Multiplicação
+ funcao multiplicacao (m, n : inteiro) : inteiro
+    var
+    rmul : inteiro
+    inicio
+    rmul <- m*n
+    retorne m*n
+ fimfuncao
+ res <- 3001
+ enquanto (res < 0) ou (res > 3000) faca
+    limpatela
+    escreval()
+    escreva("Insira o 1° número: ")
+    leia(v1)
+    escreval()
+    escreva("Insira o 2° número: ")
+    leia(v2)
+    escreval()
+    res <- soma(v1,v2)
+    escreval("Resultado: ", res)
+    escreval()
+    escreval("-------------------")
+    escreval()
+
+    se (res mod 2 = 0) e (res <= 1000) entao
+       res1 <- res - subtracao(v1,v2)
+       escreval("Resultado final: ", res1)
+     senao
+      se (res mod 2 = 1) e (res <= 1000) entao
+         res1 <- multiplicacao(res,v1)
+         escreval("Resultado final: ", res1)
+       senao
+        se (res mod 2 = 0) e (res > 1000) e (res <= 3000) entao
+           res1 <- res - multiplicacao(v1,v2)
+           escreval("Resultado final: ", res1)
+         senao
+          se (res mod 2 = 1) e (res > 1000) e (res <= 3000) entao
+             res1 <- subtracao(v1,v2)*res
+             escreval("Resultado final: ", res1)
+          fimse
+        fimse
+      fimse
+    fimse
+
+ fimenquanto
+
+Fimalgoritmo
