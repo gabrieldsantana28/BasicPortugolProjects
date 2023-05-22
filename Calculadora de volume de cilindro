@@ -1,4 +1,9 @@
 # Programs-Portugol
+Algoritmo "CalculadoraDeVolumeDeCilindro"
+// Disciplina   : Lógica da Programação
+// Professor   : Lincoln Fernando Raitz Martins
+// Autor(a)    : Gabriel Luis de Santana
+
 Var
 // Seção de Declarações das variáveis
 r, h, res : vetor[1..10] de real
