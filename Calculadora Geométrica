@@ -1,3 +1,8 @@
+Algoritmo "CalculadoraGeométrica"
+// Disciplina   : Lógica da Programação
+// Professor   : Lincoln Fernando Raitz Martins 
+// Autor(a)    : Gabriel Luis de Santana
+
 var
 x : vetor[1..10] de real
 aq, pq, ac, pc, at, pt, l, ld, h, r, b : vetor[1..10] de real
