@@ -1,4 +1,9 @@
 # Programs-Portugol
+Algoritmo "CalculadoraComFunção"
+// Disciplina   : Lógica da Programação
+// Professor   : Lincoln Fernando Raitz Martins
+// Autor(a)    : Gabriel Luis de Santana
+
 Var
 // Seção de Declarações das variáveis
 r, c, d : vetor[1..10] de real
