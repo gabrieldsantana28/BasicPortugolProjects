@@ -4,6 +4,7 @@ Algoritmo "semnome"
 // Professor   : Lincoln Fernando Raitz Martins
 // Autor(a)    : Gabriel Luis de Santana
 // Data atual  : 18/05/2023
+
 Var
 // Seção de Declarações das variáveis
  x, y, res : vetor[1..6] de real
